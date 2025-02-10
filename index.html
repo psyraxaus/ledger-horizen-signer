@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ledger Sign Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .container {
+            max-width: 1110px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .signed-messages-box {
+            margin-top: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        li {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+
+        .selected {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Horizen Ledger Sign Message App</h1>
+        <button id="connectButton">Connect Ledger</button>
+
+        <label for="accountSelect">Select Account:</label>
+        <select id="accountSelect">
+            <option value="">-- Select an account --</option>
+        </select>
+        <button id="addAccountButton">Add Account</button>
+
+        <label for="addressSelect">Select Address:</label>
+        <select id="addressSelect">
+            <option value="">-- Select an address --</option>
+        </select>
+        <button id="addAddressButton">Add Address</button>
+
+        <h2>Message to Sign</h2>
+        <input type="text" id="messageInput" placeholder="Enter message to sign">
+        <button id="signMessageButton">Sign Message</button>
+
+        <div class="signed-messages-box">
+            <h2>Signed Messages</h2>
+            <ul id="signatures">
+                <li class="placeholder">No signed message yet.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "ledger-horizen-signer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ledgerhq/hw-app-btc": "^10.5.0",
+    "@ledgerhq/hw-transport-node-hid": "^6.29.5",
+    "@ledgerhq/logs": "^6.12.0",
+    "zencashjs": "^2.2.0"
+  }
+}
