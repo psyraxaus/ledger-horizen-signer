@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ledgerhq/hw-app-btc": "^10.5.0",
+    "@ledgerhq/hw-app-btc": "^10.11.0",
     "@ledgerhq/hw-transport-node-hid": "^6.29.5",
     "@ledgerhq/logs": "^6.12.0",
     "zencashjs": "^2.2.0"
